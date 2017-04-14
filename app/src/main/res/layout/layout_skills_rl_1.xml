@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+<!--这是一个用RelativeLayout实现的水平居中，一看就知道用LinearLayout容器 然后同时分配children的weight属性
+这样实现确实很简单，但是呢 通常我们都是用RelativeLayout 布局，为了减少view的层级关系，降低性能渲染压力（其实现在的
+手机性能都不错）可以用这种方式实现-->
+        <View
+            android:id="@+id/view"
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            android:layout_centerHorizontal="true"/>
+        <Button
+            android:id="@+id/btn_second"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_toLeftOf="@id/view"
+            android:text="second"/>
+        <Button
+            android:id="@+id/btn_first"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_alignTop="@id/btn_second"
+            android:layout_toRightOf="@id/view"
+            android:text="first"/>
+
+</RelativeLayout>
