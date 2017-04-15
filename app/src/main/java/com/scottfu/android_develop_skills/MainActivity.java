@@ -14,5 +14,6 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.layout_skills_sv_1);
 
         startActivity(new Intent(this,ScrollViewAdapterActivity.class));
+
     }
 }
