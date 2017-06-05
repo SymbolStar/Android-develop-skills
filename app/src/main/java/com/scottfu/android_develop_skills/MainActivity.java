@@ -13,7 +13,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.layout_skills_sv_1);
 
-        startActivity(new Intent(this,ScrollViewAdapterActivity.class));
+        startActivity(new Intent(this,GifActivity.class));
 
     }
 }
