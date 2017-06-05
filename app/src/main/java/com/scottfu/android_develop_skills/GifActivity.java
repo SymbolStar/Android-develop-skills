@@ -1,9 +1,17 @@
 package com.scottfu.android_develop_skills;
 
+import android.Manifest;
+import android.content.pm.PackageManager;
 import android.os.Bundle;
+import android.os.Environment;
 import android.support.annotation.Nullable;
+import android.support.v4.app.ActivityCompat;
+import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.widget.ImageView;
+
+import java.io.File;
+import java.io.IOException;
 
 import pl.droidsonroids.gif.GifDrawable;
 
@@ -19,8 +27,30 @@ public class GifActivity extends AppCompatActivity {
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        File file = getExternalCacheDir();
+
+
+//单个权限申请
+        if (ContextCompat.checkSelfPermission(this, Manifest.permission.READ_EXTERNAL_STORAGE)!= PackageManager.PERMISSION_GRANTED){
+            ActivityCompat.requestPermissions(this,new String[]{Manifest.permission.READ_EXTERNAL_STORAGE},1);
+        }else{
+        }
+
+
+
         setContentView(R.layout.activity_gif);
         mGifImageView = (ImageView) findViewById(R.id.giv_gif);
-        mGifImageView.setImageResource(R.drawable.nike);
+//        mGifImageView.setImageResource(R.drawable.nike);
+//遇到一个问题 怎么将这个没有后缀的文件转换成gif文件
+//        String path = Environment.getExternalStoragePublicDirectory("test").getAbsolutePath()+"/"+"1242989854"+".gif";
+        String path = Environment.getExternalStoragePublicDirectory("test").getAbsolutePath()+"/"+"123"+".gif";
+        File file1 = new File(path);
+        try {
+            GifDrawable gifDrawable = new GifDrawable(file1);
+            mGifImageView.setImageDrawable(gifDrawable);
+
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
     }
 }
