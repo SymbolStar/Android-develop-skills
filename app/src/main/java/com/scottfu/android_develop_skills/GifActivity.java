@@ -42,6 +42,10 @@ public class GifActivity extends AppCompatActivity {
         mGifImageView = (ImageView) findViewById(R.id.giv_gif);
 //        mGifImageView.setImageResource(R.drawable.nike);
 //这里不需要加后缀
+//        Looks like your app is running on device with API level 19+ and have no permission to access /sdcard/ path.
+// You can add READ_EXTERNAL_STORAGE to the manifest or place file in application specific directory
+
+
         String path = Environment.getExternalStoragePublicDirectory("test").getAbsolutePath()+"/"+"1242989854";
 //        String path = Environment.getExternalStoragePublicDirectory("test").getAbsolutePath()+"/"+"123"+".gif";
         File file1 = new File(path);
