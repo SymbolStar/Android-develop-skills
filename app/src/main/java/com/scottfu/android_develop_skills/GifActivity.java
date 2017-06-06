@@ -41,9 +41,9 @@ public class GifActivity extends AppCompatActivity {
         setContentView(R.layout.activity_gif);
         mGifImageView = (ImageView) findViewById(R.id.giv_gif);
 //        mGifImageView.setImageResource(R.drawable.nike);
-//遇到一个问题 怎么将这个没有后缀的文件转换成gif文件
-//        String path = Environment.getExternalStoragePublicDirectory("test").getAbsolutePath()+"/"+"1242989854"+".gif";
-        String path = Environment.getExternalStoragePublicDirectory("test").getAbsolutePath()+"/"+"123"+".gif";
+//这里不需要加后缀
+        String path = Environment.getExternalStoragePublicDirectory("test").getAbsolutePath()+"/"+"1242989854";
+//        String path = Environment.getExternalStoragePublicDirectory("test").getAbsolutePath()+"/"+"123"+".gif";
         File file1 = new File(path);
         try {
             GifDrawable gifDrawable = new GifDrawable(file1);
