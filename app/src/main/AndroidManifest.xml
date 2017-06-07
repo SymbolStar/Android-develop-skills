@@ -23,6 +23,7 @@
         <activity android:name=".ScrollViewAdapterActivity"/>
         <activity android:name=".SpannableTextViewActivity"/>
         <activity android:name=".GifActivity"/>
+        <activity android:name=".constraintLayout.ConstraintLayoutActivity"/>
 
     </application>
 
