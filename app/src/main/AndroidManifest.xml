@@ -24,6 +24,8 @@
         <activity android:name=".SpannableTextViewActivity"/>
         <activity android:name=".GifActivity"/>
         <activity android:name=".constraintLayout.ConstraintLayoutActivity"/>
+        <activity android:name=".constraintLayout.ConstraintLayoutAnimationsActivity"/>
+        <activity android:name=".constraintLayout.SwapConstraintLayoutActivity"/>
 
     </application>
 

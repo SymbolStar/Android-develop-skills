@@ -14,14 +14,14 @@
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:orientation="vertical"
-        app:layout_constraintGuide_begin="8dp"/>
+        app:layout_constraintGuide_begin="3dp"/>
 
     <android.support.constraint.Guideline
         android:id="@+id/sixteenDpGuideLine"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:orientation="vertical"
-        app:layout_constraintGuide_begin="16dp"/>
+        app:layout_constraintGuide_begin="60dp"/>
 
     <Button
         android:id="@+id/button3"

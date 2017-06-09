@@ -6,6 +6,8 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 
 import com.scottfu.android_develop_skills.constraintLayout.ConstraintLayoutActivity;
+import com.scottfu.android_develop_skills.constraintLayout.ConstraintLayoutAnimationsActivity;
+import com.scottfu.android_develop_skills.constraintLayout.SwapConstraintLayoutActivity;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -15,7 +17,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.chain_test);
 
-        startActivity(new Intent(this,ConstraintLayoutActivity.class));
+        startActivity(new Intent(this,SwapConstraintLayoutActivity.class));
 
     }
 }
