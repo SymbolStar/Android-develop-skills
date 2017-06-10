@@ -42,7 +42,7 @@ public class ConstraintLayoutAnimationsActivity extends AppCompatActivity {
 
     /**
      * 当前设置的最低版本api为14
-     * @TargetApi(?) 是为了让lint 在检查变异时通过，具体在执行代码的位置还是要判断当前版本的是否执行代码
+     * @TargetApi(?) 是为了让lint 在检查编译时通过，具体在执行代码的位置还是要判断当前版本的是否执行代码
      * TransitionManager 在api19开始才支持
      *
      * 或者添加support library
